@@ -1,0 +1,12 @@
+body{
+  background-color: var(--tg-theme-bg-color)
+}
+h1{
+  font-size: 30px;
+}
+main{
+  justify-content: center; 
+}
+p{
+  color: var(--tg-theme-text-color)
+}
