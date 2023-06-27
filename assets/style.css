@@ -1,5 +1,6 @@
 body{
-  background-color: var(--tg-theme-bg-color)
+  background-color: var(--tg-theme-bg-color);
+  color: ;
 }
 h1{
   font-size: 30px;

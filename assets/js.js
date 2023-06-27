@@ -8,5 +8,5 @@ buy.addEventListener("click", () => {
   alert("Are you sure?")
   // name input
   console.log("hello world!")
-  document.getElementById("input_name").value = tg.initDataUnsafe.user.first_name+" " + tg.initData.user.last_name
+  document.getElementById("input_name").value = tg.initDataUnsafe.user.first_name+" " + tg.initDataUnsafe.user.last_name
 })
