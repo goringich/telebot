@@ -4,7 +4,7 @@ from aiogram.types.web_app_info import WebAppInfo
 bot = Bot("5460798180:AAEGrU8DD8NjlnyQAe7lVxVK-JwlZYRGGr0")
 dp = Dispatcher(bot)
 # the local site will not work
-ur = 'https://goringich.github.io/telebot/index.html'
+ur = 'https://goringich.github.io/telebot/'
 
 @dp.message_handler()
 async def start(message: types.Message):
