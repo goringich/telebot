@@ -14,7 +14,7 @@ async def start(message: types.Message):
     await message.answer("hello, my friend", reply_markup=markup)
 
 @dp.message_handler(content_types=["web_app_data"])
-async def start(message: types.Message):
+async def web_app(message: types.Message):
     await message.answer("Hello my friend, dear " + message.web_app_data.data)
     
 
