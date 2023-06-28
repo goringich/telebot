@@ -11,7 +11,7 @@ document.getElementById("input_surname").value = tg.initDataUnsafe.user.last_nam
 buy.addEventListener("click", () => {
   document.getElementsByTagName("h1")[0].style.display="block"
 
-  a=["name","surname",'text']
+  a=["name","surname",'text','mail']
   for (i in a){
     if (document.getElementById("input"+i).value.length<=2){
       error.innerText = "Error in" + i
@@ -23,7 +23,8 @@ buy.addEventListener("click", () => {
   let data = {
     name: name,
     email: mail,
-    phone: phone
+    phone: phone,
+    mail: mail
   } 
   tg.sendData(JSON.stringify(data)) //make a string 
 
