@@ -8,8 +8,8 @@ ur = 'https://goringich.github.io/telebot/'
 
 @dp.message_handler()
 async def start(message: types.Message):
-    markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton("Open website", web_app=WebAppInfo(url=ur)))
+    markup = types.ReplyKeyboardMarkup()
+    markup.add(types.KeyboardButton("Open website", web_app=WebAppInfo(url=ur)))
     await message.answer("hello, my friend", reply_markup=markup)
     
 
