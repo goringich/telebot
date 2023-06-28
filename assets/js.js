@@ -13,7 +13,7 @@ buy.addEventListener("click", () => {
 
   a=["name","surname",'text']
   for (i in a){
-    if (document.getElementsByTagName("input"+i).value.length()<=5){
+    if (document.getElementsByTagName("input"+i).value.length()<=2){
       error.innerText = "Error in" + i
       error.display="block"
     }
