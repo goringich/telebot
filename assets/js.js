@@ -1,7 +1,7 @@
 let tg = window.Telegram.WebApp
 let buy = document.getElementById("buy")
 let order = document.getElementById("order")
-let error= document.getElementsByTagName("Error")
+let error= document.getElementsById("Error")
 error.style.display="none"
 tg.expand() // open the page to full screen
 // name input
