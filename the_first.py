@@ -12,6 +12,10 @@ async def start(message: types.Message):
     markup = types.ReplyKeyboardMarkup()
     markup.add(types.KeyboardButton("Open website", web_app=WebAppInfo(url=ur)))
     await message.answer("hello, my friend", reply_markup=markup)
+
+@dp.message_handler(content_types=["web_app_data"])
+async def start(message: types.Message):
+    await message.answer("Hello my friend, dear", message.web_app_data.data)
     
 
 executor.start_polling(dp)
