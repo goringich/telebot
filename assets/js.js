@@ -11,9 +11,9 @@ buy.addEventListener("click", () => {
   document.getElementById("input_surname").value = tg.initDataUnsafe.user.last_name
   document.getElementsByTagName("h1")[0].style.display="block"
 
-  a=["name","surname",'text','mail',"phone"]
+  a=document.querySelectorAll(".input")
   for (i in a){
-    if (document.getElementById("input_"+i).value.length<=2){
+    if (i.value.length<=2){
       error.innerText = "Error in" + i
       error.display="block"
     }
