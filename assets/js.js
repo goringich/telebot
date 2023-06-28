@@ -8,5 +8,7 @@ document.getElementById("input_surname").value = tg.initDataUnsafe.user.last_nam
 
 buy.addEventListener("click", () => {
   document.getElementsByTagName("h1").style.display="block"
+
+  tg.close()
   alert("Are you sure?")
 })
