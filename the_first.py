@@ -7,7 +7,7 @@ dp = Dispatcher(bot)
 # the local site will not work
 ur = 'https://goringich.github.io/telebot/'
 
-@dp.message_handler()
+@dp.message_handler(command=["hello!"])
 async def start(message: types.Message):
     # return data only with Reply
     markup = types.ReplyKeyboardMarkup()
@@ -19,8 +19,13 @@ async def start(message: types.Message):
 async def web_app(message: types.Message):
     res=json.loads(message.web_app_data.data)
     # formatted string
+    
+    name = res["name"]
+    email = res["email"]
+    phone = res["phone"]
+    
     await message.reply("hi,men")
-    await message.answer(f'Your name: {res["name"]}. Email: {res["email"]}. Phone: {res["phone"]}')
+    await message.reply(f'Your name: {name}. Email: {email}. Phone: {phone}')
     
 
 executor.start_polling(dp)
