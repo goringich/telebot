@@ -22,7 +22,6 @@ buy.addEventListener("click", () => {
 
   let data = {
     name: name + surname,
-    email: mail,
     phone: phone,
     mail: mail
   } 

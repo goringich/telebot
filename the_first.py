@@ -21,11 +21,11 @@ async def web_app(message: types.Message):
     # formatted string
     
     name = res["name"]
-    email = res["email"]
+    mail = res["mail"]
     phone = res["phone"]
     
     await message.reply("hi,men")
-    await message.reply(f'Your name: {name}. Email: {email}. Phone: {phone}')
+    await message.reply(f'Your name: {name}. Email: {mail}. Phone: {phone}')
     
 
 executor.start_polling(dp)
