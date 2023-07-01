@@ -7,21 +7,21 @@ tg.expand() // open the page to full screen
 // name input
 
 buy.addEventListener("click", () => {
-  document.getElementById("input_name").value = tg.initDataUnsafe.user.first_name
-  document.getElementById("input_surname").value = tg.initDataUnsafe.user.last_name
-  document.getElementsByTagName("h1")[0].style.display="block"
+  const name = document.getElementById("input_name").value;
+  const surname = document.getElementById("input_surname").value;
+  const mail = document.getElementById("input_mail").value;
+  const phone = document.getElementById("input_phone").value;
+  document.getElementsByTagName("h1")[0].style.display = "block";
 
-  a=document.querySelectorAll(".input")
-  for (i in a){
-    if (i.value.length<=2){
-      error.innerText = "Error in" + i
-      error.display="block"
-    }
-      
+  // Input validation
+  if (name.length <= 2 || surname.length <= 2 || mail.length <= 2 || phone.length <= 2) {
+    error.innerText = "Error: Please fill in all fields with at least 3 characters.";
+    error.style.display = "block";
+    return;
   }
 
   let data = {
-    name: name + surname,
+    name: name + " " + surname,
     phone: phone,
     mail: mail
   } 

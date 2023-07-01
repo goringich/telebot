@@ -7,12 +7,12 @@ dp = Dispatcher(bot)
 # the local site will not work
 ur = 'https://goringich.github.io/telebot/'
 
-@dp.message_handler(command=["hello!"])
+@dp.message_handler(commands=["hello"])
 async def start(message: types.Message):
     # return data only with Reply
     markup = types.ReplyKeyboardMarkup()
     markup.add(types.KeyboardButton("Open website", web_app=WebAppInfo(url=ur)))
-    await message.answer("hello, my friend", reply_markup=markup)
+    await message.answer("hello, my friend, the best", reply_markup=markup)
 
 # data work
 @dp.message_handler(content_types=["web_app_data"])
