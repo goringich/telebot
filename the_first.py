@@ -19,6 +19,7 @@ async def start(message: types.Message):
 async def web_app(message: types.Message):
     res=json.loads(message.web_app_data.data)
     # formatted string
+    await message.reply("hi,men")
     await message.answer(f'Your name: {res["name"]}. Email: {res["email"]}. Phone: {res["phone"]}')
     
 
